@@ -1,0 +1,14 @@
+public class Solution {
+    public int singleNumber(int[] nums) {
+        int[] bitmask = new int[32];
+        int len = nums.length;
+        int res=0;
+        for(int i = 0;i<bitmask.length;i++){
+            for(int j = 0;j<len;j++){
+                bitmask[i] += (nums[j]>>i)&1;
+            }
+            res |= (bitmask[i]%3)<<i;
+        }
+        return res;
+    }
+}
