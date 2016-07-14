@@ -1,0 +1,33 @@
+public class Solution {
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        int yLen = obstacleGrid.length;
+        int xLen = obstacleGrid[0].length;
+        int[][] result = new int[yLen][xLen];
+        for(int i = 0;i<xLen;i++){
+            if(obstacleGrid[0][i]==1){
+                break;
+            }else {
+                result[0][i] = 1;
+            }
+        }
+        
+        for(int i = 0;i<yLen;i++){
+            if(obstacleGrid[i][0]==1){
+                break;
+            }else {
+                result[i][0] = 1;
+            }
+        }
+        
+        for(int i = 1;i<xLen;i++){
+            for(int j = 1;j<yLen;j++){
+                if(obstacleGrid[j][i]==1){
+                    result[j][i]=0;
+                }else{
+                    result[j][i]=result[j-1][i]+result[j][i-1];
+                }
+            }
+        }
+        return result[yLen-1][xLen-1];
+    }
+}
