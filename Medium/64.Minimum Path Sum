@@ -1,0 +1,24 @@
+public class Solution {
+    public int minPathSum(int[][] grid) {
+        int yLen = grid.length;
+        int xLen = grid[0].length;
+        int[][] matrix = new int[yLen][xLen];
+        int sum = 0;
+        for(int i = 0;i<xLen;i++){
+            sum += grid[0][i];
+            matrix[0][i] = sum;
+        }
+        sum = 0;
+        for(int i = 0;i<yLen;i++){
+            sum += grid[i][0];
+            matrix[i][0] = sum;
+        }
+        for(int i = 1;i<yLen;i++){
+            for(int j = 1;j<xLen;j++){
+                matrix[i][j] = Math.min(matrix[i-1][j],matrix[i][j-1]) + grid[i][j];
+            }
+        }
+        return matrix[yLen-1][xLen-1];
+        
+    }
+}
