@@ -6,3 +6,12 @@ PriorityQueue<Integer> pq = new PriorityQueue<Integer>(len, new Comparator<Integ
 
 //pq.offer(num);
 //pq.poll();
+
+PriorityQueue<Map.Entry<Integer, Integer>> kFrequent = new PriorityQueue<>(k,
+                                                                                   // override Comprator class 
+                                                                                   new Comparator<Map.Entry<Integer, Integer>>() {
+                                                                                      public int compare(Map.Entry<Integer, Integer> left, Map.Entry<Integer, Integer>right){
+                                                                                           return right.getValue().compareTo(left.getValue());
+                                                                                       }
+                                                                                   }
+                                                                                   );
