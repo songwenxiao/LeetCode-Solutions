@@ -1,0 +1,8 @@
+PriorityQueue<Integer> pq = new PriorityQueue<Integer>(len, new Comparator<Integer>(){
+            public int compare(Integer n1, Integer n2){
+                return n2-n1;
+            } 
+});
+
+//pq.offer(num);
+//pq.poll();
