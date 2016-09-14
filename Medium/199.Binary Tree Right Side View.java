@@ -8,7 +8,7 @@
  * }
  */
 public class Solution {
-    public List<Integer> rightSideView1(TreeNode root) {
+    public List<Integer> rightSideView1(TreeNode root) {//BFS
         List<Integer> res = new ArrayList<Integer>();
         if(root==null) return res;
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
@@ -33,7 +33,7 @@ public class Solution {
     }
 
 
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideView(TreeNode root) {//DFS
         List<Integer> result = new ArrayList<Integer>();
         rightView(root, result, 0);
         return result;
