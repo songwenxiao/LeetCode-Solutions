@@ -43,7 +43,7 @@ public class Solution {
         if(curr == null){
             return;
         }
-        if(currDepth == result.size()){
+        if(currDepth == result.size()){//gurantee 
             result.add(curr.val);
         }
         
@@ -52,3 +52,7 @@ public class Solution {
         
     }
 }
+
+// if(currDepth == result.size()){
+//     result.add(curr.val);
+// }

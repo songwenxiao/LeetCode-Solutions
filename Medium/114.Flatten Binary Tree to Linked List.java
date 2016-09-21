@@ -25,3 +25,10 @@ public class Solution {
 
     }
 }
+
+            // if (curr.right!=null)  
+            //      stk.push(curr.right);
+            // if (curr.left!=null)  
+            //      stk.push(curr.left);
+            // if (!stk.isEmpty()) 
+            //      curr.right = stk.peek();

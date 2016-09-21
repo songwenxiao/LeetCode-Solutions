@@ -40,3 +40,15 @@ public class Solution {
 
     }
 }
+
+
+
+// // if node's value is INT_MIN, it should not have left child any more
+//         if (node.val == Integer.MIN_VALUE && node.left != null) {
+//             return false;
+//         }
+
+//         // if node's value is INT_MAX, it should not have right child any more
+//         if (node.val == Integer.MAX_VALUE && node.right != null) {
+//             return false;
+//         }

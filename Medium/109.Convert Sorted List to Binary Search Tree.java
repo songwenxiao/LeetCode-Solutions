@@ -52,3 +52,13 @@ public TreeNode inorderHelper(int start, int end){
     return treenode;
     }
 }
+
+
+// TreeNode left = inorderHelper(start, mid - 1);
+
+//     TreeNode treenode = new TreeNode(node.val);
+//     treenode.left = left;
+//     node = node.next;
+
+//     TreeNode right = inorderHelper(mid + 1, end);
+//     treenode.right = right;
